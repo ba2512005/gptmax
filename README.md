@@ -1,5 +1,5 @@
 # gptmax
-upgraded chatgpt
+Upgraded ChatGpt
 
 To run:
 1. Git clone repo into folder
@@ -12,3 +12,6 @@ To run:
 5. Type in queries in the bar provided.
 6. ???
 7. Profit
+
+???
+- sometimes it throws errors and check the terminal for those errors
