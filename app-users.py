@@ -46,7 +46,10 @@ class GPTMax:
         # self.openai_api_key = openai_api_key
         openai.api_key = openai_api_key
         openai.organization = openai_organization
+
         log.info("Starting Gpt Max")
+
+        # print(models)
         # dirpath: str = os.getcwd()
         # log.info("current directory is : " + dirpath)
 
@@ -220,6 +223,14 @@ if __name__ == '__main__':
             parameters = yaml.safe_load(stream)
         except yaml.YAMLError as exc:
             raise exc
+    log.info("Available Models:")
+    openai.api_key = parameters['openai_api_key']
+    # modeles = []
+    # models = openai.Model.list()
+    # for model in models['data']:
+    #     modeles.append(model['root'])
+    # print(modeles)
+
     assert parameters['openai_api_key'] is not None
     assert parameters['openai_organization'] is not None
     assert parameters['stablediffusion_key'] is not None
@@ -269,19 +280,3 @@ if __name__ == '__main__':
         log.error(e)
         print(e)
 
-
-
-    # choice = input("Input what you'd like to do:\
-    # 1. Search the web\
-    # 2. Generate images\
-    # 3. Bitcoin price analysis\
-    # :)")
-    #
-    # if choice == '1':
-    #     prompt = input("What would you like to search for? :)")
-    #     gpt.searchTheWeb(prompt)
-    # elif choice == '2':
-    #     prompt = input("What image would you like to generate? :)")
-    #     gpt.generateImages(prompt)
-    # elif choice == '3':
-    #     gpt.bitcoinPriceAnalysis()
