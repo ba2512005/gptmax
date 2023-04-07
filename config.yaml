@@ -1,0 +1,5 @@
+openai_api_key:  "sk-XXXX"
+openai_organization: "org-XXXX"
+
+stablediffusion_key: "XXXX"
+model: "gpt-3.5-turbo"
